@@ -199,7 +199,7 @@ const MusicPlayer: React.FC = () => {
               Nakshatra Music Player
             </h1>
             <p className="text-2xl text-white font-light mb-2">Divine Music Experience</p>
-            <p className="text-lg text-orange-200 font-medium">🎵 सुर ताल मेलोडी 🎵</p>
+            <p className="text-lg text-orange-200 font-medium">🎵 Celestial Audio Journey 🎵</p>
           </div>
 
           <div className="grid grid-cols-1 xl:grid-cols-12 gap-8">
@@ -355,7 +355,7 @@ const MusicPlayer: React.FC = () => {
                       <span className="text-xl font-bold">🎵 Upload Your Music 🎵</span>
                     </label>
                     <p className="text-orange-100 text-base mt-4 font-medium">
-                      Drop your favorite tracks • सभी ऑडियो फॉर्मेट समर्थित • All formats supported 🌈
+                      Drop your favorite tracks • All formats supported 🌈
                     </p>
                   </div>
                 </CardContent>

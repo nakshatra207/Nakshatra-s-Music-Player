@@ -35,7 +35,7 @@ const Playlist: React.FC<PlaylistProps> = ({
               🎵 Your Playlist
             </div>
             <div className="text-base text-orange-200 font-normal">
-              {songs.length} tracks ready • {songs.length} ट्रैक तैयार
+              {songs.length} tracks ready
             </div>
           </div>
         </CardTitle>
@@ -49,7 +49,7 @@ const Playlist: React.FC<PlaylistProps> = ({
             </div>
             <h3 className="text-2xl font-semibold text-white mb-3">🎵 Empty Playlist 🎵</h3>
             <p className="text-orange-200 text-lg">Add some music to get started</p>
-            <p className="text-green-200 text-base mt-2">🌈 संगीत जोड़ें 🌈</p>
+            <p className="text-green-200 text-base mt-2">🌈 Celestial Tracks Awaiting 🌈</p>
           </div>
         ) : (
           <div className="max-h-96 overflow-y-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gradient-to-r scrollbar-thumb-from-orange-400 scrollbar-thumb-to-green-400">

@@ -35,9 +35,9 @@ const SongInfo: React.FC<SongInfoProps> = ({ song }) => {
             <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full animate-bounce" style={{ animationDelay: '1.5s' }}></div>
           </div>
           
-          <h2 className="text-4xl font-bold text-white mb-4 drop-shadow-lg">🎵 संगीत Ready 🎵</h2>
+          <h2 className="text-4xl font-bold text-white mb-4 drop-shadow-lg">🎵 Music Ready 🎵</h2>
           <p className="text-xl text-orange-200 font-medium">Upload your music to begin the divine journey</p>
-          <p className="text-lg text-green-200 mt-2">🌈 सुर ताल मिलाकर 🌈</p>
+          <p className="text-lg text-green-200 mt-2">🌈 Celestial Melodies Await 🌈</p>
         </CardContent>
       </Card>
     );
@@ -94,7 +94,7 @@ const SongInfo: React.FC<SongInfoProps> = ({ song }) => {
               {song.album}
             </span>
           </div>
-          <p className="text-xl text-green-200 font-medium">🌈 अब बजेगा संगीत 🌈</p>
+          <p className="text-xl text-green-200 font-medium">🌈 Now Playing Celestial Music 🌈</p>
         </div>
 
         {/* Enhanced Audio Visualization with Indian colors */}
