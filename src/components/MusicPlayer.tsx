@@ -166,27 +166,41 @@ const MusicPlayer: React.FC = () => {
   }, [currentSongIndex]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">
-      {/* Animated Background Elements */}
+    <div className="min-h-screen bg-gradient-to-br from-orange-500 via-red-500 via-pink-500 via-purple-500 via-blue-500 via-green-500 to-yellow-500 text-white overflow-hidden">
+      {/* Traditional Indian Pattern Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: `
+            radial-gradient(circle at 25% 25%, rgba(255,165,0,0.3) 0%, transparent 50%),
+            radial-gradient(circle at 75% 75%, rgba(255,20,147,0.3) 0%, transparent 50%),
+            radial-gradient(circle at 75% 25%, rgba(50,205,50,0.3) 0%, transparent 50%),
+            radial-gradient(circle at 25% 75%, rgba(30,144,255,0.3) 0%, transparent 50%)
+          `
+        }}></div>
+        
+        {/* Mandala-style decorative elements */}
+        <div className="absolute top-20 left-20 w-32 h-32 border-4 border-orange-300/20 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 border-4 border-green-300/20 rounded-full animate-spin" style={{ animationDuration: '25s', animationDirection: 'reverse' }}></div>
+        <div className="absolute top-1/2 left-10 w-24 h-24 border-4 border-pink-300/20 rounded-full animate-pulse"></div>
+        <div className="absolute top-1/3 right-10 w-28 h-28 border-4 border-blue-300/20 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
       <div className="relative z-10 p-4">
         <div className="max-w-7xl mx-auto">
-          {/* Header with Logo */}
+          {/* Header with Indian-inspired styling */}
           <div className="text-center mb-12 pt-8">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl mb-6 shadow-2xl shadow-purple-500/25">
-              <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-                <div className="w-6 h-6 bg-white rounded-sm"></div>
+            <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-orange-400 via-white to-green-400 rounded-3xl mb-6 shadow-2xl shadow-orange-500/50 border-4 border-white/30">
+              <div className="w-12 h-12 bg-gradient-to-br from-saffron-500 to-orange-600 rounded-xl flex items-center justify-center shadow-inner">
+                <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                  <div className="w-4 h-4 bg-gradient-to-br from-orange-500 to-green-500 rounded-sm"></div>
+                </div>
               </div>
             </div>
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-3">
-              Rhythm Flow
+            <h1 className="text-6xl font-bold bg-gradient-to-r from-orange-400 via-pink-400 via-purple-400 via-blue-400 via-green-400 to-yellow-400 bg-clip-text text-transparent mb-4 animate-pulse">
+              संगीत Sangam
             </h1>
-            <p className="text-xl text-gray-300 font-light">Supreme Audio Experience</p>
+            <p className="text-2xl text-white font-light mb-2">Divine Music Experience</p>
+            <p className="text-lg text-orange-200 font-medium">🎵 सुर ताल मेलोडी 🎵</p>
           </div>
 
           <div className="grid grid-cols-1 xl:grid-cols-12 gap-8">
@@ -195,10 +209,10 @@ const MusicPlayer: React.FC = () => {
               {/* Song Information Display */}
               <SongInfo song={currentSong} />
 
-              {/* Enhanced Player Controls */}
-              <Card className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl">
+              {/* Enhanced Player Controls with Indian styling */}
+              <Card className="bg-gradient-to-br from-orange-500/20 via-pink-500/20 to-green-500/20 backdrop-blur-xl border-2 border-gradient-to-r from-orange-400 to-green-400 shadow-2xl">
                 <CardContent className="p-8">
-                  {/* Progress Bar with Enhanced Styling */}
+                  {/* Progress Bar with Rainbow styling */}
                   <div className="mb-8">
                     <div className="relative">
                       <Slider
@@ -206,28 +220,32 @@ const MusicPlayer: React.FC = () => {
                         onValueChange={handleSeek}
                         max={100}
                         step={0.1}
-                        className="w-full [&>span:first-child]:h-2 [&>span:first-child]:bg-white/10 [&_[role=slider]]:bg-gradient-to-r [&_[role=slider]]:from-purple-500 [&_[role=slider]]:to-pink-500 [&_[role=slider]]:border-0 [&_[role=slider]]:w-5 [&_[role=slider]]:h-5 [&_[role=slider]]:shadow-lg [&>span:first-child>span]:bg-gradient-to-r [&>span:first-child>span]:from-purple-500 [&>span:first-child>span]:to-pink-500"
+                        className="w-full [&>span:first-child]:h-3 [&>span:first-child]:bg-gradient-to-r [&>span:first-child]:from-orange-200/30 [&>span:first-child]:to-green-200/30 [&>span:first-child]:rounded-full [&_[role=slider]]:bg-gradient-to-r [&_[role=slider]]:from-orange-400 [&_[role=slider]]:via-pink-400 [&_[role=slider]]:to-green-400 [&_[role=slider]]:border-0 [&_[role=slider]]:w-6 [&_[role=slider]]:h-6 [&_[role=slider]]:shadow-lg [&_[role=slider]]:shadow-orange-500/50 [&>span:first-child>span]:bg-gradient-to-r [&>span:first-child>span]:from-orange-400 [&>span:first-child>span]:via-pink-400 [&>span:first-child>span]:to-green-400 [&>span:first-child>span]:rounded-full"
                       />
                     </div>
-                    <div className="flex justify-between text-sm text-gray-400 mt-3 font-medium">
-                      <span className="bg-white/5 px-3 py-1 rounded-full">{formatTime(currentTime)}</span>
-                      <span className="bg-white/5 px-3 py-1 rounded-full">{formatTime(duration)}</span>
+                    <div className="flex justify-between text-sm text-orange-100 mt-4 font-medium">
+                      <span className="bg-gradient-to-r from-orange-500/30 to-pink-500/30 px-4 py-2 rounded-full border border-orange-300/30">
+                        {formatTime(currentTime)}
+                      </span>
+                      <span className="bg-gradient-to-r from-green-500/30 to-blue-500/30 px-4 py-2 rounded-full border border-green-300/30">
+                        {formatTime(duration)}
+                      </span>
                     </div>
                   </div>
 
-                  {/* Main Control Buttons with Enhanced Design */}
-                  <div className="flex items-center justify-center space-x-6 mb-8">
+                  {/* Main Control Buttons with Indian color scheme */}
+                  <div className="flex items-center justify-center space-x-8 mb-8">
                     <Button
                       variant="ghost"
                       size="lg"
                       onClick={() => setIsShuffled(!isShuffled)}
-                      className={`w-14 h-14 rounded-full transition-all duration-300 hover:scale-110 ${
+                      className={`w-16 h-16 rounded-full transition-all duration-300 hover:scale-110 border-2 ${
                         isShuffled 
-                          ? 'bg-gradient-to-br from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/25' 
-                          : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
+                          ? 'bg-gradient-to-br from-orange-500 to-pink-500 text-white shadow-lg shadow-orange-500/40 border-orange-300' 
+                          : 'bg-gradient-to-br from-white/10 to-orange-100/10 text-orange-100 hover:bg-gradient-to-br hover:from-orange-400/20 hover:to-pink-400/20 hover:text-white border-orange-300/50'
                       }`}
                     >
-                      <Shuffle className="h-5 w-5" />
+                      <Shuffle className="h-6 w-6" />
                     </Button>
 
                     <Button
@@ -235,9 +253,9 @@ const MusicPlayer: React.FC = () => {
                       size="lg"
                       onClick={previousSong}
                       disabled={songs.length === 0}
-                      className="w-16 h-16 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all duration-300 hover:scale-110 disabled:opacity-30"
+                      className="w-18 h-18 rounded-full bg-gradient-to-br from-blue-400/20 to-purple-400/20 text-white hover:from-blue-500/30 hover:to-purple-500/30 transition-all duration-300 hover:scale-110 disabled:opacity-30 border-2 border-blue-300/50"
                     >
-                      <SkipBack className="h-6 w-6" />
+                      <SkipBack className="h-7 w-7" />
                     </Button>
 
                     <Button
@@ -245,9 +263,9 @@ const MusicPlayer: React.FC = () => {
                       size="lg"
                       onClick={togglePlayPause}
                       disabled={!currentSong}
-                      className="w-20 h-20 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 text-white shadow-2xl shadow-purple-500/40 hover:shadow-3xl hover:scale-105 transition-all duration-300 disabled:opacity-50"
+                      className="w-24 h-24 rounded-full bg-gradient-to-br from-orange-400 via-pink-500 via-purple-500 to-green-400 text-white shadow-2xl shadow-rainbow-500/60 hover:shadow-3xl hover:scale-105 transition-all duration-300 disabled:opacity-50 border-4 border-white/30"
                     >
-                      {isPlaying ? <Pause className="h-8 w-8" /> : <Play className="h-8 w-8 ml-1" />}
+                      {isPlaying ? <Pause className="h-10 w-10" /> : <Play className="h-10 w-10 ml-1" />}
                     </Button>
 
                     <Button
@@ -255,9 +273,9 @@ const MusicPlayer: React.FC = () => {
                       size="lg"
                       onClick={nextSong}
                       disabled={songs.length === 0}
-                      className="w-16 h-16 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all duration-300 hover:scale-110 disabled:opacity-30"
+                      className="w-18 h-18 rounded-full bg-gradient-to-br from-green-400/20 to-blue-400/20 text-white hover:from-green-500/30 hover:to-blue-500/30 transition-all duration-300 hover:scale-110 disabled:opacity-30 border-2 border-green-300/50"
                     >
-                      <SkipForward className="h-6 w-6" />
+                      <SkipForward className="h-7 w-7" />
                     </Button>
 
                     <Button
@@ -267,32 +285,34 @@ const MusicPlayer: React.FC = () => {
                         repeatMode === 'none' ? 'all' : 
                         repeatMode === 'all' ? 'one' : 'none'
                       )}
-                      className={`w-14 h-14 rounded-full transition-all duration-300 hover:scale-110 relative ${
+                      className={`w-16 h-16 rounded-full transition-all duration-300 hover:scale-110 relative border-2 ${
                         repeatMode !== 'none' 
-                          ? 'bg-gradient-to-br from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/25' 
-                          : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
+                          ? 'bg-gradient-to-br from-green-500 to-blue-500 text-white shadow-lg shadow-green-500/40 border-green-300' 
+                          : 'bg-gradient-to-br from-white/10 to-green-100/10 text-green-100 hover:bg-gradient-to-br hover:from-green-400/20 hover:to-blue-400/20 hover:text-white border-green-300/50'
                       }`}
                     >
-                      <Repeat className="h-5 w-5" />
+                      <Repeat className="h-6 w-6" />
                       {repeatMode === 'one' && (
-                        <span className="absolute -top-1 -right-1 w-5 h-5 bg-white text-purple-500 rounded-full text-xs font-bold flex items-center justify-center">1</span>
+                        <span className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-orange-400 to-pink-400 text-white rounded-full text-xs font-bold flex items-center justify-center border-2 border-white">1</span>
                       )}
                     </Button>
                   </div>
 
-                  {/* Secondary Controls */}
+                  {/* Secondary Controls with Indian styling */}
                   <div className="flex items-center justify-between">
                     {/* Volume Control */}
                     <div className="flex items-center space-x-4 flex-1 max-w-xs">
-                      <Volume2 className="h-5 w-5 text-gray-400" />
+                      <Volume2 className="h-6 w-6 text-orange-200" />
                       <Slider
                         value={[volume]}
                         onValueChange={handleVolumeChange}
                         max={100}
                         step={1}
-                        className="flex-1 [&>span:first-child]:h-2 [&>span:first-child]:bg-white/10 [&_[role=slider]]:bg-gradient-to-r [&_[role=slider]]:from-purple-500 [&_[role=slider]]:to-pink-500 [&_[role=slider]]:border-0 [&_[role=slider]]:w-4 [&_[role=slider]]:h-4 [&>span:first-child>span]:bg-gradient-to-r [&>span:first-child>span]:from-purple-500 [&>span:first-child>span]:to-pink-500"
+                        className="flex-1 [&>span:first-child]:h-2 [&>span:first-child]:bg-gradient-to-r [&>span:first-child]:from-orange-200/30 [&>span:first-child]:to-green-200/30 [&>span:first-child]:rounded-full [&_[role=slider]]:bg-gradient-to-r [&_[role=slider]]:from-orange-400 [&_[role=slider]]:to-green-400 [&_[role=slider]]:border-0 [&_[role=slider]]:w-5 [&_[role=slider]]:h-5 [&>span:first-child>span]:bg-gradient-to-r [&>span:first-child>span]:from-orange-400 [&>span:first-child>span]:to-green-400 [&>span:first-child>span]:rounded-full"
                       />
-                      <span className="text-sm text-gray-400 w-12 text-center bg-white/5 px-2 py-1 rounded-full">{volume}%</span>
+                      <span className="text-sm text-orange-100 w-16 text-center bg-gradient-to-r from-orange-500/30 to-green-500/30 px-3 py-2 rounded-full border border-orange-300/30 font-medium">
+                        {volume}%
+                      </span>
                     </div>
 
                     {/* Additional Controls */}
@@ -300,24 +320,24 @@ const MusicPlayer: React.FC = () => {
                       <Button
                         variant="ghost"
                         size="sm"
-                        className="w-10 h-10 rounded-full bg-white/10 text-white/70 hover:bg-white/20 hover:text-white transition-all duration-300"
+                        className="w-12 h-12 rounded-full bg-gradient-to-br from-pink-400/20 to-red-400/20 text-pink-100 hover:from-pink-500/30 hover:to-red-500/30 hover:text-white transition-all duration-300 border border-pink-300/30"
                       >
-                        <Heart className="h-4 w-4" />
+                        <Heart className="h-5 w-5" />
                       </Button>
                       <Button
                         variant="ghost"
                         size="sm"
-                        className="w-10 h-10 rounded-full bg-white/10 text-white/70 hover:bg-white/20 hover:text-white transition-all duration-300"
+                        className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400/20 to-purple-400/20 text-blue-100 hover:from-blue-500/30 hover:to-purple-500/30 hover:text-white transition-all duration-300 border border-blue-300/30"
                       >
-                        <MoreHorizontal className="h-4 w-4" />
+                        <MoreHorizontal className="h-5 w-5" />
                       </Button>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              {/* Enhanced File Upload */}
-              <Card className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-xl border border-purple-500/20 shadow-2xl shadow-purple-500/10">
+              {/* Enhanced File Upload with Indian styling */}
+              <Card className="bg-gradient-to-br from-orange-400/20 via-pink-400/20 via-purple-400/20 to-green-400/20 backdrop-blur-xl border-2 border-white/30 shadow-2xl shadow-rainbow-500/20">
                 <CardContent className="p-8">
                   <div className="text-center">
                     <input
@@ -330,13 +350,13 @@ const MusicPlayer: React.FC = () => {
                     />
                     <label
                       htmlFor="file-upload"
-                      className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-2xl cursor-pointer hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 hover:scale-105"
+                      className="group inline-flex items-center px-10 py-5 bg-gradient-to-r from-orange-500 via-pink-500 via-purple-500 to-green-500 text-white rounded-3xl cursor-pointer hover:from-orange-600 hover:via-pink-600 hover:via-purple-600 hover:to-green-600 transition-all duration-300 shadow-lg shadow-rainbow-500/30 hover:shadow-xl hover:shadow-rainbow-500/50 hover:scale-105 border-2 border-white/30"
                     >
-                      <Upload className="h-6 w-6 mr-3 group-hover:animate-bounce" />
-                      <span className="text-lg font-semibold">Upload Your Music</span>
+                      <Upload className="h-7 w-7 mr-4 group-hover:animate-bounce" />
+                      <span className="text-xl font-bold">🎵 Upload Your Music 🎵</span>
                     </label>
-                    <p className="text-gray-400 text-sm mt-4 font-medium">
-                      Drop your favorite tracks • Supports MP3, MP4, WAV, OGG, FLAC & more
+                    <p className="text-orange-100 text-base mt-4 font-medium">
+                      Drop your favorite tracks • सभी ऑडियो फॉर्मेट समर्थित • All formats supported 🌈
                     </p>
                   </div>
                 </CardContent>
