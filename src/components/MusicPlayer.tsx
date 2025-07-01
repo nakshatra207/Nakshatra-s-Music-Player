@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { Play, Pause, SkipForward, SkipBack, Volume2, Shuffle, Repeat, Upload, Heart, MoreHorizontal } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -166,10 +165,10 @@ const MusicPlayer: React.FC = () => {
   }, [currentSongIndex]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-500 via-red-500 via-pink-500 via-purple-500 via-blue-500 via-green-500 to-yellow-500 text-white overflow-hidden">
-      {/* Traditional Indian Pattern Background */}
+    <div className="min-h-screen bg-black text-white overflow-hidden">
+      {/* Traditional Indian Pattern Background with black theme */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 opacity-10" style={{
+        <div className="absolute inset-0 opacity-20" style={{
           backgroundImage: `
             radial-gradient(circle at 25% 25%, rgba(255,165,0,0.3) 0%, transparent 50%),
             radial-gradient(circle at 75% 75%, rgba(255,20,147,0.3) 0%, transparent 50%),
@@ -197,7 +196,7 @@ const MusicPlayer: React.FC = () => {
               </div>
             </div>
             <h1 className="text-6xl font-bold bg-gradient-to-r from-orange-400 via-pink-400 via-purple-400 via-blue-400 via-green-400 to-yellow-400 bg-clip-text text-transparent mb-4 animate-pulse">
-              संगीत Sangam
+              Nakshatra Music Player
             </h1>
             <p className="text-2xl text-white font-light mb-2">Divine Music Experience</p>
             <p className="text-lg text-orange-200 font-medium">🎵 सुर ताल मेलोडी 🎵</p>
